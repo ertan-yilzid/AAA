@@ -97,10 +97,10 @@ Pour chaque processus : PID, nom, pourcentage CPU et mémoire
 
 ## Captures d'écran
 Termunal
-![alt text](image-url)
+![alt text](https://github.com/ertan-yilzid/AAA/blob/main/screenshots/terminal.png)
 
 Site
-![alt text](image-url)
+![alt text](https://github.com/ertan-yilzid/AAA/blob/main/screenshots/site.png)
 
 ## Difficultés rencontrées
 
