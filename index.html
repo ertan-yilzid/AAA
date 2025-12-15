@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1">
+    <title>System Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>System Monitor Dashboard</h1>
+        <p class="timestamp">Last Update: 2025-12-15 11:24:56</p>
+    </header>
+
+    <main>
+        <section class="system-info">
+            <h2>System Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Hostname:</span>
+                    <span class="value">paragon</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">OS:</span>
+                    <span class="value">Linux 6.14.0-24-generic</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Boot Time:</span>
+                    <span class="value">2025-12-15 11:09:43</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Uptime:</span>
+                    <span class="value">0d 0h 15m</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Users:</span>
+                    <span class="value">1 (paragon)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">IP Address:</span>
+                    <span class="value">10.10.12.205</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cpu-info">
+            <h2>CPU</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Cores:</span>
+                    <span class="value">20 (10 Physical, 20 Logical)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Current Clock:</span>
+                    <span class="value">1015.72 MHz</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Min Clock:</span>
+                    <span class="value">623.0 MHz</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Max Clock:</span>
+                    <span class="value">4030.4 MHz</span>
+                </div>
+            </div>
+            <div class="usage-box">
+                <h3>CPU Usage: 6.4%</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 6.4%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="memory-info">
+            <h2>Memory (RAM)</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Total:</span>
+                    <span class="value">30.47 GB</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">In Use:</span>
+                    <span class="value">3.03 GB</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Available:</span>
+                    <span class="value">26.93 GB</span>
+                </div>
+            </div>
+            <div class="usage-box">
+                <h3>Memory Usage: 11.6%</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 11.6%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="disk-info">
+            <h2>Disk</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Total:</span>
+                    <span class="value">228.48 GB</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Used:</span>
+                    <span class="value">13.59 GB</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Free:</span>
+                    <span class="value">203.22 GB</span>
+                </div>
+            </div>
+            <div class="usage-box">
+                <h3>Disk Usage: 6.3%</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 6.3%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="processes">
+            <h2>Processes (441 total)</h2>
+            
+            <h3>Top 3 CPU Usage</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PID</th>
+                        <th>Name</th>
+                        <th>CPU %</th>
+                        <th>Memory %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>6344</td>
+                        <td>firefox-bin</td>
+                        <td>22.0</td>
+                        <td>2.13</td>
+                    </tr>
+                    <tr>
+                        <td>1279</td>
+                        <td>Xorg</td>
+                        <td>19.1</td>
+                        <td>0.48</td>
+                    </tr>
+                    <tr>
+                        <td>1874</td>
+                        <td>cinnamon</td>
+                        <td>13.4</td>
+                        <td>0.85</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Top 3 Memory Usage</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PID</th>
+                        <th>Name</th>
+                        <th>CPU %</th>
+                        <th>Memory %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>6595</td>
+                        <td>Isolated Web Co</td>
+                        <td>2.9</td>
+                        <td>2.58</td>
+                    </tr>
+                    <tr>
+                        <td>6344</td>
+                        <td>firefox-bin</td>
+                        <td>22.0</td>
+                        <td>2.13</td>
+                    </tr>
+                    <tr>
+                        <td>6878</td>
+                        <td>Isolated Web Co</td>
+                        <td>6.7</td>
+                        <td>0.99</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Top 3 Overall</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PID</th>
+                        <th>Name</th>
+                        <th>CPU %</th>
+                        <th>Memory %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>6344</td>
+                        <td>firefox-bin</td>
+                        <td>22.0</td>
+                        <td>2.13</td>
+                    </tr>
+                    <tr>
+                        <td>1279</td>
+                        <td>Xorg</td>
+                        <td>19.1</td>
+                        <td>0.48</td>
+                    </tr>
+                    <tr>
+                        <td>1874</td>
+                        <td>cinnamon</td>
+                        <td>13.4</td>
+                        <td>0.85</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="file-analysis">
+            <h2>File Analysis</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Directory:</span>
+                    <span class="value">/home/paragon/Desktop/projetAAA-main</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Total Files:</span>
+                    <span class="value">6</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Directory Size:</span>
+                    <span class="value">0.04 MB</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Monitored Files:</span>
+                    <span class="value">1</span>
+                </div>
+            </div>
+
+            <h3>File Types</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Extension</th>
+                        <th>Count</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.txt</td>
+                        <td>0</td>
+                        <td>0.0%</td>
+                    </tr>
+                    <tr>
+                        <td>.py</td>
+                        <td>1</td>
+                        <td>16.67%</td>
+                    </tr>
+                    <tr>
+                        <td>.pdf</td>
+                        <td>0</td>
+                        <td>0.0%</td>
+                    </tr>
+                    <tr>
+                        <td>.jpg</td>
+                        <td>0</td>
+                        <td>0.0%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>System Monitor Dashboard - Updates every second</p>
+    </footer>
+</body>
+</html>

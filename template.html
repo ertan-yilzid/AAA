@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1">
+    <title>System Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>System Monitor Dashboard</h1>
+        <p class="timestamp">Last Update: {{CURRENT_TIMESTAMP}}</p>
+    </header>
+
+    <main>
+        <section class="system-info">
+            <h2>System Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Hostname:</span>
+                    <span class="value">{{NAME}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">OS:</span>
+                    <span class="value">{{OS_FULL}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Boot Time:</span>
+                    <span class="value">{{BOOT_TIME}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Uptime:</span>
+                    <span class="value">{{UPTIME}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Users:</span>
+                    <span class="value">{{USER_COUNT}} ({{USER_NAMES}})</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">IP Address:</span>
+                    <span class="value">{{MAIN_IP}}</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cpu-info">
+            <h2>CPU</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Cores:</span>
+                    <span class="value">{{CORES}} ({{CORES_PHYSICAL}} Physical, {{CORES_LOGICAL}} Logical)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Current Clock:</span>
+                    <span class="value">{{CURR_CL}} MHz</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Min Clock:</span>
+                    <span class="value">{{MIN_CL}} MHz</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Max Clock:</span>
+                    <span class="value">{{MAX_CL}} MHz</span>
+                </div>
+            </div>
+            <div class="usage-box">
+                <h3>CPU Usage: {{CPU}}%</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{CPU}}%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="memory-info">
+            <h2>Memory (RAM)</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Total:</span>
+                    <span class="value">{{TOTAL_RAM_GB}} GB</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">In Use:</span>
+                    <span class="value">{{IN_USE_GB}} GB</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Available:</span>
+                    <span class="value">{{AVAILABLE_RAM_GB}} GB</span>
+                </div>
+            </div>
+            <div class="usage-box">
+                <h3>Memory Usage: {{PERCENT_RAM}}%</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{PERCENT_RAM}}%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="disk-info">
+            <h2>Disk</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Total:</span>
+                    <span class="value">{{TOTAL_DISK_GB}} GB</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Used:</span>
+                    <span class="value">{{USED_DISK_GB}} GB</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Free:</span>
+                    <span class="value">{{FREE_DISK_GB}} GB</span>
+                </div>
+            </div>
+            <div class="usage-box">
+                <h3>Disk Usage: {{PERCENT_DISK}}%</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{PERCENT_DISK}}%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="processes">
+            <h2>Processes ({{PROCESS_COUNT}} total)</h2>
+            
+            <h3>Top 3 CPU Usage</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PID</th>
+                        <th>Name</th>
+                        <th>CPU %</th>
+                        <th>Memory %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{CPU_PID1}}</td>
+                        <td>{{CPU_NAME1}}</td>
+                        <td>{{CPU_CPU1}}</td>
+                        <td>{{CPU_MEMORY1}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{CPU_PID2}}</td>
+                        <td>{{CPU_NAME2}}</td>
+                        <td>{{CPU_CPU2}}</td>
+                        <td>{{CPU_MEMORY2}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{CPU_PID3}}</td>
+                        <td>{{CPU_NAME3}}</td>
+                        <td>{{CPU_CPU3}}</td>
+                        <td>{{CPU_MEMORY3}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Top 3 Memory Usage</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PID</th>
+                        <th>Name</th>
+                        <th>CPU %</th>
+                        <th>Memory %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{RAM_PID1}}</td>
+                        <td>{{RAM_NAME1}}</td>
+                        <td>{{RAM_CPU1}}</td>
+                        <td>{{RAM_MEMORY1}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{RAM_PID2}}</td>
+                        <td>{{RAM_NAME2}}</td>
+                        <td>{{RAM_CPU2}}</td>
+                        <td>{{RAM_MEMORY2}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{RAM_PID3}}</td>
+                        <td>{{RAM_NAME3}}</td>
+                        <td>{{RAM_CPU3}}</td>
+                        <td>{{RAM_MEMORY3}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Top 3 Overall</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PID</th>
+                        <th>Name</th>
+                        <th>CPU %</th>
+                        <th>Memory %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{TOP_PID1}}</td>
+                        <td>{{TOP_NAME1}}</td>
+                        <td>{{TOP_CPU1}}</td>
+                        <td>{{TOP_MEMORY1}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{TOP_PID2}}</td>
+                        <td>{{TOP_NAME2}}</td>
+                        <td>{{TOP_CPU2}}</td>
+                        <td>{{TOP_MEMORY2}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{TOP_PID3}}</td>
+                        <td>{{TOP_NAME3}}</td>
+                        <td>{{TOP_CPU3}}</td>
+                        <td>{{TOP_MEMORY3}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="file-analysis">
+            <h2>File Analysis</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Directory:</span>
+                    <span class="value">{{PATH}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Total Files:</span>
+                    <span class="value">{{TOTAL_FILES_COUNT}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Directory Size:</span>
+                    <span class="value">{{DIRECTORY_SIZE_MB}} MB</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Monitored Files:</span>
+                    <span class="value">{{SET_FILES_COUNT}}</span>
+                </div>
+            </div>
+
+            <h3>File Types</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Extension</th>
+                        <th>Count</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.txt</td>
+                        <td>{{TXT_COUNT}}</td>
+                        <td>{{TXT_PERCENT}}%</td>
+                    </tr>
+                    <tr>
+                        <td>.py</td>
+                        <td>{{PY_COUNT}}</td>
+                        <td>{{PY_PERCENT}}%</td>
+                    </tr>
+                    <tr>
+                        <td>.pdf</td>
+                        <td>{{PDF_COUNT}}</td>
+                        <td>{{PDF_PERCENT}}%</td>
+                    </tr>
+                    <tr>
+                        <td>.jpg</td>
+                        <td>{{JPG_COUNT}}</td>
+                        <td>{{JPG_PERCENT}}%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>System Monitor Dashboard - Updates every second</p>
+    </footer>
+</body>
+</html>
