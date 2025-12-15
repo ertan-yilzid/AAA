@@ -96,8 +96,11 @@ Pour chaque processus : PID, nom, pourcentage CPU et mémoire
 - Pourcentage de chaque type de fichier
 
 ## Captures d'écran
+Termunal
+![alt text](image-url)
 
-***
+Site
+![alt text](image-url)
 
 ## Difficultés rencontrées
 
