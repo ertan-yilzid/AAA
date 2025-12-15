@@ -28,7 +28,7 @@ git clone https://github.com/ertan-yilzid/AAA
 Le projet nécessite la bibliothèque `psutil` pour collecter les informations système :
 
 ```bash
-pip install psutil
+pip3 install psutil
 ```
 
 ## Utilisation
@@ -39,7 +39,7 @@ pip install psutil
 2. Lancez le script Python :
 
 ```bash
-python monitor.py
+python3 monitor.py
 ```
 
 ### Visualiser le dashboard
@@ -89,7 +89,7 @@ Trois classements distincts des processus :
 Pour chaque processus : PID, nom, pourcentage CPU et mémoire
 
 ### Analyse de Fichiers
-- Répertoire surveillé : Desktop
+- Répertoire surveillé
 - Nombre total de fichiers
 - Taille totale du répertoire
 - Statistiques par type de fichier (.txt, .py, .pdf, .jpg)
