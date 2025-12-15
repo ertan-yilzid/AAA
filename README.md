@@ -96,10 +96,12 @@ Pour chaque processus : PID, nom, pourcentage CPU et mémoire
 - Pourcentage de chaque type de fichier
 
 ## Captures d'écran
-Termunal
+Terminal
+
 ![alt text](https://github.com/ertan-yilzid/AAA/blob/main/screenshots/terminal.png)
 
 Site
+
 ![alt text](https://github.com/ertan-yilzid/AAA/blob/main/screenshots/site.png)
 
 ## Difficultés rencontrées
