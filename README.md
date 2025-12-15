@@ -104,12 +104,6 @@ Site
 
 ![alt text](https://github.com/ertan-yilzid/AAA/blob/main/screenshots/site.png)
 
-## Difficultés rencontrées
-
-## Améliorations possibles
-
-### Fonctionnalités
-
 ## Auteur
 
 **Challenge Triple A - Projet de Monitoring Système**
